@@ -1,0 +1,27 @@
+package classesandobjects;
+
+public class Renavation {
+	double width;
+	double length;
+	double height;
+	//double costRate; //per square foot
+	//when creating 100 rooms, in memory there will be 100 of each that will be created
+	Renavation(double length, double width) {
+		//keyword refers to the current object which is the instance variable length
+		//this keyword is only required when the variable names are the same
+		this.length = length; // the length is the loacl variable length
+	}
+	double calculateFloorArea() {
+		
+		double area = width * length;
+		return area;
+		
+	}
+	double costOfPainting() {
+		
+		double costRate = 1.50; //per square foot
+		double area = 2 * ((length * height) + (height + length));
+		return costRate * area;
+		
+	}
+}

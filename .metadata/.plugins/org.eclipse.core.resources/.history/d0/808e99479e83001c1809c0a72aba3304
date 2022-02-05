@@ -1,0 +1,5 @@
+package interfacesandabstractclasses;
+
+public interface SafetyGuidelines2022 {
+
+}

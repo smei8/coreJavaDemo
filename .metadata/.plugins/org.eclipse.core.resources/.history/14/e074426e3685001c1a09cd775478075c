@@ -1,0 +1,47 @@
+package service;
+
+import java.util.List;
+
+import dao.BookDao;
+import pojo.BookPojo;
+
+//presentation layer will be calling the service layer and these methods will then call the DAO layer
+public class BookServiceImpl implements BookService {
+	
+	BookDao bookDao;
+
+	public BookServiceImpl() {
+		bookDao = new BookDaoImpl();
+	}
+
+	@Override
+	public List<BookPojo> fetchAllBooks() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public BookPojo addBook(BookPojo bookPojo) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public BookPojo updateBook(BookPojo bookPojo) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public BookPojo deleteBook(int bookID) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public BookPojo fetchABook(int bookID) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

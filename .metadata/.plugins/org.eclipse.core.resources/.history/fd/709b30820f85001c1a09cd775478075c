@@ -1,0 +1,22 @@
+package arrays;
+
+import classesandobjects.Renavation;
+
+public class RoomArrayDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Renavation room1 = new Renavation(20.5,20.6);
+		Renavation room2 = new Renavation();
+		
+		Renavation[] myRoom = new Renavation[3]; //the object is not created yet, we only created a array of 3 room references
+		myRoom[0] = new Renavation(); //the room object is created
+		myRoom[1] = new Renavation();
+		myRoom[2] = new Renavation();
+		
+		//initialize an array of room object
+		Renavation[] allRooms = {new Renavation(), new Renavation(), new Renavation(), new Renavation()};
+		
+	}
+
+}

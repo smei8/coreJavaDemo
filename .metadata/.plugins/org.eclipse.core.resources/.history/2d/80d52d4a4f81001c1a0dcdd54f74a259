@@ -1,0 +1,49 @@
+package assignment2;
+
+public class ArrayDemo {
+
+	public static int sumOfArray(int [] array) {
+		int sum = 0; // sum of array
+		
+		for (int i = 0; i < array.length; i++) {
+			sum = array[i] + sum;
+		}
+		return sum;
+	}
+	public static int duplicateNum(int [] array) {
+		//int countArr[] = new int[array.length];
+		//int postindex = 0;
+		int count = 0;
+		
+		for (int i = 0; i < array.length; i++) {
+			//System.out.println("this is i: " + array[i]);
+			for (int j = i + 1; j < array.length; j++) {
+				//System.out.println("this is j: " + array[j]);
+				if (array[i] == array[j]) {
+					//countArr[i] = array[i];
+					//count[i]++;
+					count += 1;
+					//return count;
+					//System.out.println("this is count in if " +  count);
+					
+				}
+			}
+		}
+//		for (int i = 0; i < array.length; i++) {
+//			countArr[i] = array[i];
+//			return countArr[i] + count;
+//		}
+		return count;
+		
+	}
+	public static void main(String[] args) {
+		int[] myNumbers = new int[] {10, 20, 30, 10, 40, 50, 20, 10}; //total 190
+		
+		//System.out.println("The sum of this array is "+ sumOfArray(myNumbers));
+		for (int i = 0; i < myNumbers.length; i++) {
+			System.out.print(myNumbers[i]);
+			System.out.println(duplicateNum(myNumbers));
+		}
+	}
+
+}

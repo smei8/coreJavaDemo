@@ -1,0 +1,23 @@
+package classesandobjects;
+
+public class Renavation {
+	double width;
+	double length;
+	double height;
+	//double costRate; //per square foot
+	//when creating 100 rooms, in memory there will be 100 of each that will be created
+	
+	double calculateFloorArea() {
+		
+		double area = width * length;
+		return area;
+		
+	}
+	double costOfPainting() {
+		
+		double costRate = 1.50; //per square foot
+		double area = 2 * ((length * height) + (height + length));
+		return costRate * area;
+		
+	}
+}

@@ -1,0 +1,23 @@
+package collections;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class HashMapDemo {
+
+	public static void main(String[] args) {
+		//map differs from the rest of the collectio because it has a key and value
+		
+		//interface refernce var =  new collection you are creating()
+		Map<String, Integer> phoneBook = new HashMap<String, Integer>();
+		
+		//Creating
+		phoneBook.put("xyz", 123456);
+		phoneBook.put("abs", 234567);
+		phoneBook.put("dfg", 345566);
+		
+		//Reading
+		System.out.println("phone number of abs is: " + phoneBook.get("abs"));
+	}
+
+}

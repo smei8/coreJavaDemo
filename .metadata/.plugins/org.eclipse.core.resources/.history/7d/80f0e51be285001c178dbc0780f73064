@@ -1,0 +1,20 @@
+package stringstringbufferandstringbuilder;
+
+public class StringBufferDemo {
+
+	public static void main(String[] args) {
+		
+		String str1 = "";
+		str1 = str1 + "welcome";
+		str1 = str1 + "home";
+		System.out.println("String: " + str1);
+		
+		StringBuffer sb1 = new StringBuffer();
+		sb1.append("hello");
+		sb1.append("java");
+		System.out.println("String Buffer: " + sb1);
+		
+		
+	}
+
+}

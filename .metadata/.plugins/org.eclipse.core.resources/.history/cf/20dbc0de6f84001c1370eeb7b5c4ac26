@@ -1,0 +1,51 @@
+package dao;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import pojo.BookPojo;
+
+public class BookDaoImp implements BookDao {
+
+	//declaring reference variable and will point to ....
+	List<BookPojo> allBooks;
+	
+	//to initialize instance variable
+	public BookDaoImp() {
+		allBooks = new ArrayList<BookPojo>();
+		
+		//BookPojo book1 = new BookPojo(101, "Harry Potter and the chamber of Secrets", 
+								//	"J.K.Rowling", "Ficition", 40, "");
+		
+		allBooks.add(new BookPojo(101, "Harry Potter and the chamber of Secrets", 
+									"J.K.Rowling", "Ficition", 40, ""));
+		allBooks.add(new BookPojo(102, "Harry Potter and the Goblet of Fire", 
+									"J.K.Rowling", "Ficition", 35, ""));
+		allBooks.add(new BookPojo(103, "Harry Potter and the Half Blood Prince", 
+				"J.K.Rowling", "Ficition", 45, ""));
+	}
+
+	@Override
+	public List<BookPojo> fetchAllBooks() {
+		return allBooks;
+	}
+
+	@Override
+	public BookPojo addBook(BookPojo bookPojo) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public BookPojo updateBook(BookPojo bookPojo) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public BookPojo deleteBook(int bookID) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

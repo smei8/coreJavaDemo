@@ -1,0 +1,30 @@
+package collections;
+
+import java.util.List;
+import java.util.Vector;
+
+public class VecterDemo {
+
+	public static void main(String[] args) {
+		
+		//default capacity is 10
+		Vector myVector = new Vector();
+		
+		String str1 = "blue";
+		String str2 = "yellow";
+		String str3 = "green";
+		Integer number = 22;
+		
+		//Creating
+		myVector.add(str1);
+		myVector.add(str2);
+		myVector.add(str3);
+		myVector.add(number);
+		myVector.add("new element", 4);
+		
+		//Reading
+		System.out.println(myVector);
+		
+		//
+	}
+}

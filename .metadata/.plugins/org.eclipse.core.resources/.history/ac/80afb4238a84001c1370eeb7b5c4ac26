@@ -1,0 +1,39 @@
+package dao;
+
+import java.util.List;
+
+import pojo.MangaPojo;
+
+public class MangaDaoImpl implements MangaDao {
+
+	@Override
+	public List<MangaPojo> fetchAllManga() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public MangaPojo addManga(MangaPojo mangaPojo) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public MangaPojo updateManga(MangaPojo mangaPojo) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public MangaPojo deleteManga(int mangaId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public MangaPojo fetchAManga(int mangaId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -1,0 +1,86 @@
+package presentation;
+
+import java.util.Iterator;
+import java.util.List;
+import java.util.Scanner;
+
+import pojo.BookPojo;
+import service.BookService;
+import service.BookServiceImpl;
+
+public class BookMain {
+
+	public static void main(String[] args) {
+
+		BookService bookService = new BookServiceImpl();
+		
+		Scanner scan = new Scanner(System.in);
+		char ch = 'y';
+		while(ch == 'y') {
+		
+			System.out.println("**************************************************************");
+			System.out.println("\tBook Managament System");
+			System.out.println("**************************************************************");
+			System.out.println("1. Add a Book");
+			System.out.println("2. Update a Book");
+			System.out.println("3. Remove a Book");
+			System.out.println("4. Fetch all Books");
+			System.out.println("5. Fetch a Book");
+			System.out.println("6. Exit");
+			System.out.println("**************************************************************");
+			System.out.println("Please enter menu option: ");
+			
+			int option = scan.nextInt();
+			scan.nextLine();
+			
+			System.out.println("*********************************************************************************************************");
+			System.out.println("Book ID" + "\t" + "Book Title" + "\t\t\t\t" + "Book Auther" + "\t" + "Book Genre" + "\t" + "Book Cost");
+			System.out.println("*********************************************************************************************************");
+
+	
+			switch(option) {
+				case 1:
+					//to store the user input
+					BookPojo newBook= new BookPojo();
+					
+					System.out.println("Enter Book Title: ");
+					newBook.setBookTitle(scan.next());
+					//scan.nextLine();
+					System.out.println("Enter Book Auther: ");
+					newBook.setBookAuther(scan.next());
+					//scan.nextLine();
+					System.out.println("Enter Book Genre: ");
+					newBook.setBookGenre(scan.next());
+					//scan.nextLine();
+					System.out.println("Enter Book Cost: ");
+					newBook.setBookCost(scan.nextInt());
+				
+					BookPojo addedBook = bookService.addBook(newBook);
+					System.out.println("Book was added successfully!\nYou new Book ID is " + addedBook.getBookID());
+					
+					break;
+				case 2:
+					break;
+				case 3:
+					break;
+				case 4:
+					List<BookPojo> allBooks = bookService.fetchAllBooks();
+					Iterator<BookPojo> itr = allBooks.iterator();
+					while (itr.hasNext()) {
+						BookPojo book = itr.next();
+						System.out.println(book.getBookID() + "\t" + book.getBookTitle() + "\t" + 
+								book.getBookAuther() + "\t" + book.getBookGenre() + "\t" + book.getBookCost());
+					}
+					break;
+				case 5:
+					break;
+				case 6:
+					System.exit(0);  //to convey to the caller(JVM) to exit the system with no problem 
+			}
+			System.out.println("Do you want to continue? (y/n): ");
+			ch = scan.next().charAt(0);
+			scan.nextLine();
+		}
+	}
+
+}

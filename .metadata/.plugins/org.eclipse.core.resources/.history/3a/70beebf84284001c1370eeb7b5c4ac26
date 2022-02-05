@@ -1,0 +1,26 @@
+package collections;
+
+import java.util.ArrayList;
+
+public class ArrayListDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		ArrayList myList = new ArrayList();
+		
+		String str1 = "hello";
+		String str2 = "Welcome";
+		//Room room = new Room(200. 300);
+		//wrapper class
+		Integer number = new Integer(10);
+		
+		myList.add(str1);
+		myList.add(str2);
+		//myList.add(room);
+		myList.add(number);
+		
+		System.out.println(myList);
+	}
+
+}
